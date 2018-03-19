@@ -8,7 +8,7 @@ RUN mkdir -p /app
 WORKDIR /app
 
 # Install ember-cli
-RUN yarn global add ember-cli
+RUN yarn global add ember-cli@3.0.0
 
 # Allow SSH keys to be mounted (optional, but nice if you use SSH authentication for git)
 VOLUME /root/.ssh
