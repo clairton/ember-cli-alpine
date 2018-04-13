@@ -20,5 +20,7 @@ RUN echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repos
 # test server on port 5779
 EXPOSE 4200 7020 5779
 
+ENV DEBUG_PORT 5779
+
 # run ember server on container start
-CMD ember server --live-reload-port 5779 --watcher polling --host 0.0.0.0
+CMD ember server --live-reload-port $DEBUG_PORT --watcher polling --host 0.0.0.0
