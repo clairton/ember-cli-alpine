@@ -5,7 +5,7 @@ MAINTAINER Clairton Rodrigo Heinzen <clairton.rodrigo@gmail.com>
 RUN apk add --update --no-cache git
 
 # Install ember-cli
-RUN yarn global add ember-cli@3.0.0
+RUN yarn global add ember-cli@3.1.1
 
 # Allow SSH keys to be mounted (optional, but nice if you use SSH authentication for git)
 VOLUME /root/.ssh
