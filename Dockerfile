@@ -17,10 +17,10 @@ RUN echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repos
       chromium@edge \
       nss@edge
 
-# test server on port 5779
-EXPOSE 4200 7020 5779
-
 ENV DEBUG_PORT 5779
+
+# test server on port 5779
+EXPOSE 4200 7020 $DEBUG_PORT
 
 # run ember server on container start
 CMD ember server --live-reload-port $DEBUG_PORT --watcher polling --host 0.0.0.0
